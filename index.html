@@ -2,19 +2,25 @@
 <html lang="en">
 
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Tea Shop</title>
- <!-- google font  -->
- <link rel="stylesheet" href="style.css">
- <link rel="preconnect" href="https://fonts.googleapis.com">
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
- <link
-  href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap"
-  rel="stylesheet">
- <script src="https://example.com/fontawesome/vVERSION/js/all.js" data-auto-a11y="true"></script>
-  <!-- tailwind css  -->
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tea Shop</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Winky+Sans:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome (CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+
   <style type="text/tailwindcss">
     @theme {
       --color-clifford: #da373d;
@@ -22,20 +28,105 @@
   </style>
 </head>
 
-<body>
- <header>
-  <div class="flex">
-   <div>
-    <h1><span>It's good
-      tea time at</span><br>
-     The Tea House</h1>
-   </div>
-   <div>
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ2hS8rqEOicRW3DQQ5K6BHIYOeMEzn6-GuQ&s" alt=""
-     srcset="">
-   </div>
-  </div>
- </header>
+<body class="font-sans">
+
+  <main class="max-w-screen-xl mx-auto px-6 lg:px-24 py-10">
+    <header class="flex  lg:flex-row items-center justify-between gap-10">
+
+      <!-- Text Container -->
+      <div class="font-serif lg:w-1/2">
+        <h1 class="text-5xl md:text-7xl font-bold mb-5 leading-tight">
+          It's good <br> tea time at <br>
+          <span class="text-orange-400">The Tea House</span>
+        </h1>
+        <p class="text-sm text-gray-400 w-3/4">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Voluptatibus, quia? Consequuntur tenetur iste animi
+          unde dolorem minus dicta.
+        </p>
+        <br>
+        <button class="bg-gradient-to-r from-orange-500  to-pink-500 hover:bg-green-700 text-white px-4 py-2 
+        rounded-lg inline-flex items-center gap-2 font-bold">
+          <img class="w-[30px] h-[20px] -rotate-45 " src="https://img.icons8.com/?size=160&id=115826&format=png" alt=""
+            srcset="">
+          Explore more
+        </button>
+      </div>
+      <!-- image container  -->
+      <div class="lg:w-1/2 relative flex justify-center">
+        <!-- Tea image -->
+        <img src="images/banner.png" alt="Tea Image" class="w-full max-w-md bg-transparent" />
+
+        <!-- Floating card (bottom left of image) -->
+        <div class="absolute -bottom-5 left-5 bg-white shadow-lg px-4 py-2 rounded-lg flex items-center gap-3">
+          <!-- Icon -->
+          <img class="w-5 h-5" src="https://img.icons8.com/?size=96&id=qdQpy48X3Rjv&format=png" alt="star" />
+
+          <!-- Rating info -->
+          <div>
+            <h3 class="text-base font-bold text-black">5.00</h3>
+            <p class="text-xs text-gray-500">Trust Pilot Ratings</p>
+          </div>
+        </div>
+      </div>
+
+    </header>
+    <!-- Features products  -->
+    <section class="py-8 lg:py-24">
+      <!-- title  -->
+      <div class="text-center mb-8 font-serif">
+        <h1 class="text-3xl md:text-4xl font-bold mb-2">Our Features Products</h1>
+        <p class="text-gray-400 mx-auto max-w-xl mb-10">There are many variations of passages of Lorem Ipsum available,
+          but the
+          majority have suffered alteration in
+          some form, by injected humour, or randomised words which don't look even slightly believable. </p>
+      </div>
+      <!-- grid  1-->
+      <div class="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-4 mx-auto">
+        <!-- cards -->
+        <div class=" rounded-lg shadow-md
+         bg-gray-50
+        overflow-hidden">
+          <img class="mx-auto pt-5 pb-2 " src="images/tea-2.png" alt="" srcset="">
+          <div class="p-4">
+            <h2 class="ml-20 font-bold font-serif text-xl ">Black Tea</h2>
+            <p class="ml-8 text-gray-500">Creamer cloud be replaced</p>
+          </div>
+        </div>
+        
+        <div class=" rounded-lg shadow-md
+        bg-gray-50
+       overflow-hidden">
+         <img class="mx-auto pt-5 pb-2 " src="images/tea-3.png" alt="" srcset="">
+         <div class="p-4">
+           <h2 class="ml-20 font-bold font-serif text-xl ">Lemon Tea</h2>
+           <p class="ml-8 text-gray-500">Creamer cloud be replaced</p>
+         </div>
+       </div>
+       <div class=" rounded-lg shadow-md
+       bg-gray-50
+      overflow-hidden">
+        <img class="mx-auto pt-5 pb-2 " src="images/tea-1.png" alt="" srcset="">
+        <div class="p-4">
+          <h2 class="ml-20 font-bold font-serif text-xl ">Mlik Tea</h2>
+          <p class="ml-8 text-gray-500">Creamer cloud be replaced</p>
+        </div>
+      </div>
+      <div class=" rounded-lg shadow-md
+      bg-gray-50
+     overflow-hidden">
+       <img class="mx-auto pt-5 pb-2 " src="images/tea-3.png" alt="" srcset="">
+       <div class="p-4">
+         <h2 class="ml-20 font-bold font-serif text-xl ">Green Tea</h2>
+         <p class="ml-8 text-gray-500">Creamer cloud be replaced</p>
+       </div>
+     </div>
+      </div>
+
+
+    </section>
+
+  </main>
 </body>
 
 </html>
